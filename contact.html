@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="contactUs">联系我们 - BL Lighting</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Company Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-i18n="navHome">首页</a></li>
+                <li><a href="index.html#products" data-i18n="navProducts">产品展示</a></li>
+                <li><a href="about.html" data-i18n="navAbout">关于我们</a></li>
+                <li><a href="contact.html" data-i18n="navContact">联系我们</a></li>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="zh">中文</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>
+    </header>
+
+    <section id="contact" class="section">
+        <h2 data-i18n="contactUs">联系我们</h2>
+        <div class="contact-info">
+            <p><strong data-i18n="companyNameLabel">公司中文名:</strong> <span data-i18n="companyName">惠州市泰莱智能照明有限公司</span></p>
+            <p><strong data-i18n="companyNameEnLabel">公司英文名:</strong> <span data-i18n="companyNameEn">BL LIGHTING INTERNATIONAL CO., LIMITED</span></p>
+            <p><strong data-i18n="addressLabel">地址:</strong> <span data-i18n="address">中国广东省惠州市惠城区小金口祥达路19号</span></p>
+            <p><strong data-i18n="phoneLabel">电话:</strong> <span data-i18n="phone">+86 13809836936</span></p>
+            <p><strong data-i18n="emailLabel">邮箱:</strong> <span data-i18n="email">bllightingdavid@gmail.com</span></p>
+            <p><strong data-i18n="wechatLabel">微信号:</strong> <span data-i18n="wechat">+86 13809836936</span></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 <span data-i18n="companyName">惠州市泰莱智能照明有限公司</span>. All rights reserved.</p>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setLanguage('en'); // or 'zh', 'fr', depending on your default language
+        });
+    </script>
+</body>
+</html> 

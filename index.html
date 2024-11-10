@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pageTitle">BL Lighting - 照亮未来</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Company Logo"></a>
+        </div>
+        <div class="company-name">
+            <div data-i18n="companyNameZh">惠州市泰莱智能照明有限公司</div>
+            <div data-i18n="companyNameEn">BL LIGHTING INTERNATIONAL CO., LIMITED</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" data-i18n="navHome">首页</a></li>
+                <li><a href="products.html" data-i18n="navProducts">产品展示</a></li>
+                <li><a href="about.html" data-i18n="navAbout">关于我们</a></li>
+                <li><a href="contact.html" data-i18n="navContact">联系我们</a></li>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="zh">中文</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+            </select>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="carousel-images/1.png" alt="Slide 1" class="active">
+                <img src="carousel-images/2.png" alt="Slide 2">
+                <img src="carousel-images/3.png" alt="Slide 3">
+            </div>
+            <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="hero-content">
+        <h1 data-i18n="heroTitle">点亮未来，照耀生活</h1>
+        <p data-i18n="heroSubtitle">BL Lighting 以卓越的设计和精湛的工艺，打造适合各种商业与家庭环境的高品质灯具。</p>
+        <a href="products.html" class="cta-button" data-i18n="ctaButton">探索我们的产品</a>
+    </section>
+
+    <section id="testimonials" class="section">
+        <h2 data-i18n="testimonials">客户心声</h2>
+        <div class="testimonial">
+            <blockquote>
+                <p data-i18n="testimonialContent">“BL Lighting 的灯具不仅美观，而且极具功能性，完美提升了我们的空间氛围。”</p>
+                <cite data-i18n="testimonialAuthor">— 我们有一位来自德国的设计师和一位我们中国公司的设计师：David Chen</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 <span data-i18n="companyName">惠州市泰莱智能照明有限公司</span>. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#privacy" data-i18n="privacyPolicy">隐私政策</a></li>
+                <li><a href="#sitemap" data-i18n="sitemap">网站地图</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+</body>
+</html> 
