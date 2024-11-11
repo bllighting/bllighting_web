@@ -75,6 +75,10 @@ nav ul li a:hover {
     .company-name {
         text-align: center;
         margin-bottom: 10px;
+        font-size: 0.9em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     nav ul {
@@ -85,6 +89,11 @@ nav ul li a:hover {
 
     nav ul li {
         margin: 0 10px;
+    }
+
+    nav ul li a {
+        font-size: 0.85em;
+        white-space: nowrap;
     }
 
     .hero-content {
