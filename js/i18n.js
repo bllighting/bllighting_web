@@ -55,7 +55,8 @@ const translations = {
             "We continually strive for excellence, ensuring each product becomes a classic.",
             "Join us in exploring the infinite possibilities of light."
         ],
-        testimonialAuthor: "We have a designer from Germany and a designer from our Chinese company: David Chen"
+        testimonialAuthor: "We have a designer from Germany and a designer from our Chinese company: David Chen",
+        footerCopyright: "© 2024 BL LIGHTING INTERNATIONAL CO., LIMITED. All Rights Reserved."
     },
     zh: {
         pageTitle: "BL Lighting - 照亮未来",
@@ -113,7 +114,8 @@ const translations = {
             "我们不断追求卓越，力求每一件产品都能成为经典。",
             "加入我们，探索光的无限可能。"
         ],
-        testimonialAuthor: "我们有一位来自德国的设计师和一位我们中国公司的设计师：David Chen"
+        testimonialAuthor: "我们有一位来自德国的设计师和一位我们中国公司的设计师：David Chen",
+        footerCopyright: "© 2024 惠州市泰莱智能照明有限公司. 版权所有."
     },
     fr: {
         pageTitle: "BL Lighting - Éclairer l'Avenir",
@@ -171,7 +173,8 @@ const translations = {
             "Nous nous efforçons continuellement d'excellence, garantissant que chaque produit devienne un classique.",
             "Rejoignez-nous pour explorer les possibilités infinies de la lumière."
         ],
-        testimonialAuthor: "Nous avons un designer d'Allemagne et un designer de notre entreprise chinoise : David Chen"
+        testimonialAuthor: "Nous avons un designer d'Allemagne et un designer de notre entreprise chinoise : David Chen",
+        footerCopyright: "© 2024 BL LIGHTING INTERNATIONAL CO., LIMITED. Tous droits réservés."
     },
     de: {
         pageTitle: "BL Lighting - Die Zukunft Erleuchten",
@@ -229,7 +232,8 @@ const translations = {
             "Wir streben kontinuierlich nach Exzellenz und stellen sicher, dass jedes Produkt zu einem Klassiker wird.",
             "Begleiten Sie uns, um die unendlichen Möglichkeiten des Lichts zu erkunden."
         ],
-        testimonialAuthor: "Wir haben einen Designer aus Deutschland und einen Designer aus unserem chinesischen Unternehmen: David Chen"
+        testimonialAuthor: "Wir haben einen Designer aus Deutschland und einen Designer aus unserem chinesischen Unternehmen: David Chen",
+        footerCopyright: "© 2024 BL LIGHTING INTERNATIONAL CO., LIMITED. Alle Rechte vorbehalten."
     }
 };
 
@@ -243,15 +247,18 @@ function setLanguage(lang) {
             element.textContent = content;
         }
     });
+    localStorage.setItem('selectedLanguage', lang); // Save the selected language
 }
 
 document.getElementById('language-select').addEventListener('change', (event) => {
     setLanguage(event.target.value);
 });
 
-// Set default language
+// Set default language based on saved preference or default to English
 document.addEventListener('DOMContentLoaded', function() {
-    setLanguage('en'); // or 'zh', 'fr', 'de', depending on your default language
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    setLanguage(savedLanguage);
+    document.getElementById('language-select').value = savedLanguage;
 });
 
 let currentSlide = 0;
@@ -259,7 +266,7 @@ const slides = document.querySelectorAll('.carousel-images img');
 
 function showSlide(index) {
     slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
+        slide.style.display = i === index ? 'block' : 'none';
     });
 }
 

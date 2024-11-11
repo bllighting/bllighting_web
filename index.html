@@ -34,36 +34,38 @@
         </div>
     </header>
 
-    <section id="hero">
-        <div class="carousel">
-            <div class="carousel-images">
-                <img src="carousel-images/1.png" alt="Slide 1" class="active">
-                <img src="carousel-images/2.png" alt="Slide 2">
-                <img src="carousel-images/3.png" alt="Slide 3">
+    <main>
+        <section id="hero">
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="carousel-images/1.png" alt="Slide 1">
+                    <img src="carousel-images/2.png" alt="Slide 2">
+                    <img src="carousel-images/3.png" alt="Slide 3">
+                </div>
+                <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+                <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
             </div>
-            <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
-            <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
-        </div>
-    </section>
+        </section>
 
-    <section class="hero-content">
-        <h1 data-i18n="heroTitle">点亮未来，照耀生活</h1>
-        <p data-i18n="heroSubtitle">BL Lighting 以卓越的设计和精湛的工艺，打造适合各种商业与家庭环境的高品质灯具。</p>
-        <a href="products.html" class="cta-button" data-i18n="ctaButton">探索我们的产品</a>
-    </section>
+        <section class="hero-content">
+            <h1 data-i18n="heroTitle">点亮未来，照耀生活</h1>
+            <p data-i18n="heroSubtitle">BL Lighting 以卓越的设计和精湛的工艺，打造适合各种商业与家庭环境的高品质灯具。</p>
+            <a href="products.html" class="cta-button" data-i18n="ctaButton">探索我们的产品</a>
+        </section>
 
-    <section id="testimonials" class="section">
-        <h2 data-i18n="testimonials">客户心声</h2>
-        <div class="testimonial">
-            <blockquote>
-                <p data-i18n="testimonialContent">“BL Lighting 的灯具不仅美观，而且极具功能性，完美提升了我们的空间氛围。”</p>
-                <cite data-i18n="testimonialAuthor">— 我们有一位来自德国的设计师和一位我们中国公司的设计师：David Chen</cite>
-            </blockquote>
-        </div>
-    </section>
+        <section id="testimonials" class="section">
+            <h2 data-i18n="testimonials">客户心声</h2>
+            <div class="testimonial">
+                <blockquote>
+                    <p data-i18n="testimonialContent">“BL Lighting 的灯具不仅美观，而且极具功能性，完美提升了我们的空间氛围。”</p>
+                    <cite data-i18n="testimonialAuthor">— 我们有一位来自德国的设计师和一位我们中国公司的设计师：David Chen</cite>
+                </blockquote>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2024 <span data-i18n="companyName">惠州市泰莱智能照明有限公司</span>. All rights reserved.</p>
+        <p data-i18n="footerCopyright">© 2024 惠州市泰莱智能照明有限公司. 版权所有. | All Rights Reserved.</p>
         <nav>
             <ul>
                 <li><a href="#privacy" data-i18n="privacyPolicy">隐私政策</a></li>
@@ -73,5 +75,12 @@
     </footer>
 
     <script src="js/i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            setLanguage(savedLanguage);
+            document.getElementById('language-select').value = savedLanguage;
+        });
+    </script>
 </body>
 </html> 

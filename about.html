@@ -12,6 +12,10 @@
         <div class="logo">
             <a href="index.html"><img src="images/logo.png" alt="Company Logo"></a>
         </div>
+        <div class="company-name">
+            <div data-i18n="companyNameZh">惠州市泰莱智能照明有限公司</div>
+            <div data-i18n="companyNameEn">BL LIGHTING INTERNATIONAL CO., LIMITED</div>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html" data-i18n="navHome">首页</a></li>
@@ -30,28 +34,38 @@
         </div>
     </header>
 
-    <section id="about" class="section">
-        <h2 data-i18n="aboutUs">关于我们</h2>
-        <ul data-i18n="aboutUsContent">
-            <li>BL LIGHTING INTERNATIONAL CO., LIMITED 致力于创造高品质、设计导向的灯具，适用于高端环境。</li>
-            <li>凭借15年的经验，我们提供无眩光、耐用的产品，完美结合形式与功能，优雅地照亮空间。</li>
-            <li>我们的使命是通过创新的照明解决方案，提升生活品质。</li>
-            <li>我们的团队由来自全球的顶尖设计师组成，他们将现代美学与实用性完美融合。</li>
-            <li>无论是商业空间还是家庭环境，我们的灯具都能为您带来卓越的视觉体验。</li>
-            <li>在BL Lighting，我们相信光不仅仅是照明，更是艺术。</li>
-            <li>我们不断追求卓越，力求每一件产品都能成为经典。</li>
-            <li>加入我们，探索光的无限可能。</li>
-        </ul>
-    </section>
+    <main>
+        <section id="about" class="section">
+            <h2 data-i18n="aboutUs">关于我们</h2>
+            <ul data-i18n="aboutUsContent">
+                <li>BL LIGHTING INTERNATIONAL CO., LIMITED 致力于创造高品质、设计导向的灯具，适用于高端环境。</li>
+                <li>凭借15年的经验，我们提供无眩光、耐用的产品，完美结合形式与功能，优雅地照亮空间。</li>
+                <li>我们的使命是通过创新的照明解决方案，提升生活品质。</li>
+                <li>我们的团队由来自全球的顶尖设计师组成，他们将现代美学与实用性完美融合。</li>
+                <li>无论是商业空间还是家庭环境，我们的灯具都能为您带来卓越的视觉体验。</li>
+                <li>在BL Lighting，我们相信光不仅仅是照明，更是艺术。</li>
+                <li>我们不断追求卓越，力求每一件产品都能成为经典。</li>
+                <li>加入我们，探索光的无限可能。</li>
+            </ul>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2024 <span data-i18n="companyName">惠州市泰莱智能照明有限公司</span>. All rights reserved.</p>
+        <p data-i18n="footerCopyright">© 2024 惠州市泰莱智能照明有限公司. 版权所有. | All Rights Reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#privacy" data-i18n="privacyPolicy">隐私政策</a></li>
+                <li><a href="#sitemap" data-i18n="sitemap">网站地图</a></li>
+            </ul>
+        </nav>
     </footer>
 
     <script src="js/i18n.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            setLanguage('en'); // or 'zh', 'fr', 'de', depending on your default language
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            setLanguage(savedLanguage);
+            document.getElementById('language-select').value = savedLanguage;
         });
     </script>
 </body>

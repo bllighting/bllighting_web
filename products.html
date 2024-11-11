@@ -34,11 +34,10 @@
         </div>
     </header>
 
-    <section id="products" class="section">
-        <h2 data-i18n="productsTitle">产品展示</h2>
-        
-        <div class="product-category">
-            <h3 data-i18n="tableLamps">台灯</h3>
+    <main>
+        <section id="products" class="section">
+            <h2 data-i18n="productsTitle">产品展示</h2>
+            
             <div class="product-grid">
                 <div class="product-item">
                     <img src="product-images/table-lamp.jpg" alt="Table Lamp" class="product-image">
@@ -46,49 +45,24 @@
                     <p data-i18n="tableLampDesc">简约设计，适合各种桌面环境，提升您的工作与生活品质。</p>
                     <a href="product-details.html" class="details-button" data-i18n="detailsButton">查看详情</a>
                 </div>
-            </div>
-        </div>
-
-        <div class="product-category">
-            <h3 data-i18n="floorLamps">落地灯</h3>
-            <div class="product-grid">
                 <div class="product-item">
                     <img src="product-images/floor-lamp.jpg" alt="Floor Lamp" class="product-image">
                     <h4 data-i18n="floorLampName">现代落地灯</h4>
                     <p data-i18n="floorLampDesc">优雅设计，适合客厅和卧室，营造温馨舒适的氛围。</p>
                     <a href="product-details.html" class="details-button" data-i18n="detailsButton">查看详情</a>
                 </div>
-            </div>
-        </div>
-
-        <div class="product-category">
-            <h3 data-i18n="chandeliers">吊灯</h3>
-            <div class="product-grid">
                 <div class="product-item">
                     <img src="product-images/chandelier.jpg" alt="Chandelier" class="product-image">
                     <h4 data-i18n="chandelierName">豪华吊灯</h4>
                     <p data-i18n="chandelierDesc">奢华设计，提升空间品味，成为您家居的点睛之笔。</p>
                     <a href="product-details.html" class="details-button" data-i18n="detailsButton">查看详情</a>
                 </div>
-            </div>
-        </div>
-
-        <div class="product-category">
-            <h3 data-i18n="ceilingLamps">吸顶灯</h3>
-            <div class="product-grid">
                 <div class="product-item">
                     <img src="product-images/ceiling lamp 1.png" alt="Ceiling Lamp 1" class="product-image">
                     <h4 data-i18n="ceilingLampName">现代吸顶灯</h4>
                     <p data-i18n="ceilingLampDesc">简洁设计，适合各种室内环境，提供均匀柔和的照明。</p>
                     <a href="product-details.html" class="details-button" data-i18n="detailsButton">查看详情</a>
                 </div>
-                <!-- Repeat for other ceiling lamps -->
-            </div>
-        </div>
-
-        <div class="product-category">
-            <h3 data-i18n="wallLamps">壁灯</h3>
-            <div class="product-grid">
                 <div class="product-item">
                     <img src="product-images/wall-lamp.jpg" alt="Wall Lamp" class="product-image">
                     <h4 data-i18n="wallLampName">现代壁灯</h4>
@@ -96,18 +70,25 @@
                     <a href="product-details.html" class="details-button" data-i18n="detailsButton">查看详情</a>
                 </div>
             </div>
-        </div>
-
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2024 <span data-i18n="companyName">惠州市泰莱智能照明有限公司</span>. All rights reserved.</p>
+        <p data-i18n="footerCopyright">© 2024 惠州市泰莱智能照明有限公司. 版权所有. | All Rights Reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#privacy" data-i18n="privacyPolicy">隐私政策</a></li>
+                <li><a href="#sitemap" data-i18n="sitemap">网站地图</a></li>
+            </ul>
+        </nav>
     </footer>
 
     <script src="js/i18n.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            setLanguage('en'); // or 'zh', 'fr', 'de', depending on your default language
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            setLanguage(savedLanguage);
+            document.getElementById('language-select').value = savedLanguage;
         });
     </script>
 </body>
