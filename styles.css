@@ -279,3 +279,23 @@ footer nav ul li a:hover {
 .details-button:hover {
     background-color: #555;
 }
+
+/* Factory section styles */
+.factory-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.factory-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.factory-description {
+    margin-top: 15px;
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
